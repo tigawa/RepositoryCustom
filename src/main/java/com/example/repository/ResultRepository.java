@@ -7,5 +7,5 @@ import com.example.model.Result;
 
 @Repository
 public interface ResultRepository extends JpaRepository<Result, Integer>, ResultRepositoryCustom {
-
+	Result findByTypeCode(int typeCode);
 }

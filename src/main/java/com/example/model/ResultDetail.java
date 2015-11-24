@@ -70,4 +70,10 @@ public class ResultDetail implements Serializable {
 		this.staff = staff;
 	}
 
+	@Override
+	public String toString() {
+		return "ResultDetail [id=" + id + ", point=" + point + ", result="
+				+ result + ", staff=" + staff + "]";
+	}
+
 }

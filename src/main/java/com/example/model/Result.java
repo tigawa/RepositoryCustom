@@ -17,6 +17,7 @@ import javax.persistence.OneToMany;
 @Entity
 @NamedQuery(name="Result.findAll", query="SELECT r FROM Result r")
 public class Result implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -70,4 +71,8 @@ public class Result implements Serializable {
 		return resultDetail;
 	}
 
+	@Override
+	public String toString() {
+		return "Result [id=" + id + ", typeCode=" + typeCode + "]";
+	}
 }
