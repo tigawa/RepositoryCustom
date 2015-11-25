@@ -14,6 +14,7 @@ import javax.persistence.TypedQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.query.QueryUtils;
 
 import com.example.controller.dto.ResultCriteria;
@@ -116,4 +117,8 @@ public class ResultRepositoryImpl implements ResultRepositoryCustom {
 
         return new PageImpl<Result>(Results, pageable, total); // (12)
     }
+	
+	public Sort sortByIdAsc() {
+		return new Sort(Sort.Direction.ASC, "id");
+	}
 }
