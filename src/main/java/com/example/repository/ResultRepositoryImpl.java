@@ -36,10 +36,7 @@ public class ResultRepositoryImpl implements ResultRepositoryCustom {
         final List<String> joinConditions = new ArrayList<String>();
         final Map<String, Object> bindParameters = new HashMap<String, Object>();
 
-        String join = "";
 		if (criteria.getStaffId() != null) {
-//			join = " join (select distinct z.resultId from ResultDetail z where z.staffId = :staffId ) d on r.id = d.resultId ";
-//			join = " join result_detail d on r.id = d.result_id ";
 			joinConditions.add("r.resultDetails rd");
 			andConditions.add("rd.staff.id = :staffId");
 			bindParameters.put("staffId", criteria.getStaffId());

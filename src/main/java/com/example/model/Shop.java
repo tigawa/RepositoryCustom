@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 
 /**
  * The persistent class for the shop database table.
@@ -21,6 +23,7 @@ public class Shop implements Serializable {
 	@Id
 	private int id;
 
+	@NotBlank
 	private String name;
 
 	//bi-directional many-to-one association to Staff
